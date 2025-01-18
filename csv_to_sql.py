@@ -6,7 +6,7 @@ cnx = mysql.connector.connect(user='root', password='root',
                               database='work')
 
 # Insert data into MySQL
-data = pd.read_csv(r'C:\Users\kashv\Downloads\dummy.csv')
+data = pd.read_csv('./dummy.csv')
 data.to_sql(name='dummy', con=cnx, if_exists='append', index=False)
 
 # Close the MySQL connection
